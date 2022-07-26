@@ -9,7 +9,7 @@ namespace CoreSchool.Entities
         {
             get
             {
-                return name;
+                return $"✨ {name} ✨";
             }
 
             set
@@ -19,7 +19,7 @@ namespace CoreSchool.Entities
         }
 
 
-        School(string schoolName)
+        public School(string schoolName)
         {
             name = schoolName;
         }
