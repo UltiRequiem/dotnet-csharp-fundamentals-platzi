@@ -2,5 +2,5 @@
 
 var school = new School("Platzi");
 
-Console.WriteLine(school.Name);
+Console.WriteLine(school);
 
