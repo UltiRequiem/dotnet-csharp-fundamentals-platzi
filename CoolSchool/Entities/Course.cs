@@ -2,9 +2,9 @@ namespace CoolSchool.Entities;
 
 public class Course
 {
-    public string Id { get; private set; }
-    public string Name { get; private set; }
+    public string Id { get; }
 
+    public string Name { get; }
 
     public Course(string courseName)
     {

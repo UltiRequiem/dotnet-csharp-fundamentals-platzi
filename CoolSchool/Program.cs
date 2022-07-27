@@ -5,7 +5,7 @@ var school = new School("Platzi");
 
 WriteLine(school);
 
-var courses = new[] { new Course("Python") };
+var courses = new[] { new Course("Python"), new Course("JavaScript") };
 
 school.AddCourses(courses);
 
