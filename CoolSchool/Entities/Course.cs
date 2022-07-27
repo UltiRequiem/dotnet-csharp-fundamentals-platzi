@@ -2,10 +2,15 @@ namespace CoreSchool.Entities
 {
     public class Course
     {
-        public int id;
-        public string name;
+        public string id { get; private set; }
+        public string name { get; private set; }
 
-        public Course(int courseId, string courseName) => (id, name) = (courseId, courseName);
+
+        public Course(string courseName)
+        {
+            name = courseName;
+            id = Guid.NewGuid().ToString();
+        }
     }
 
 }

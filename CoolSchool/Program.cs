@@ -4,7 +4,7 @@ var school = new School("Platzi");
 
 Console.WriteLine(school);
 
-Course[] courses = { new Course(34, "Python") };
+Course[] courses = { new Course("Python") };
 
 school.AddCourses(courses);
 
