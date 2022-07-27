@@ -1,33 +1,30 @@
-namespace CoreSchool.Entities
-{
-    class School
+namespace CoolSchool.Entities;
+    internal class School
     {
-        public string name;
-        public SchoolTypes type;
-        public Course[]? courses;
+        private string name;
+        private SchoolTypes type;
+        private Course[]? _courses;
 
         public School(string schoolName, SchoolTypes schoolTypes = SchoolTypes.HighSchool) => (name, type) = (schoolName.ToUpper(), schoolTypes);
 
         public override string ToString() => $"{name} - {type}";
 
-        public void AddCourses(Course[] schoolCourses) => courses = schoolCourses;
+        public void AddCourses(Course[] schoolCourses) => _courses = schoolCourses;
 
         public void ShowCourses()
         {
-            if (courses == null)
+            if (_courses == null)
             {
                 throw new Exception("This school does not have any courses.");
             }
 
             Console.WriteLine();
 
-            foreach (var course in courses)
+            foreach (var course in _courses)
             {
-                Console.WriteLine($"{course.name} - {course.id}");
+                Console.WriteLine($"{course.Name} - {course.Id}");
             }
 
             Console.WriteLine();
         }
     }
-
-}

@@ -1,10 +1,11 @@
-﻿using CoreSchool.Entities;
+﻿using CoolSchool.Entities;
+using static System.Console;
 
 var school = new School("Platzi");
 
-Console.WriteLine(school);
+WriteLine(school);
 
-var courses = new Course[] { new Course("Python") };
+var courses = new[] { new Course("Python") };
 
 school.AddCourses(courses);
 

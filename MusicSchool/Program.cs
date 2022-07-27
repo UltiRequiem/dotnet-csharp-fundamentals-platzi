@@ -1,50 +1,48 @@
-﻿class School
+﻿namespace MusicSchool;
+using static Console;
+
+internal class School
 {
-    public string name;
-    public string direction;
-    public int fundationYear;
-    public string director;
+    private string _name;
+    private string _direction;
 
-    public School(string schoolName, string schoolDirection, int schoolFundationYear, string schoolDirector)
+    public School(string schoolName, string schoolDirection)
     {
-        name = schoolName;
-        direction = schoolDirection;
-        fundationYear = schoolFundationYear;
-        director = schoolDirector;
-
+        _name = schoolName;
+        _direction = schoolDirection;
     }
 
     public void ring()
     {
-        Console.Beep(987, 1000);
-        Console.Beep(1174, 500);
-        Console.Beep(880, 1500);
+        Beep(987, 1000);
+        Beep(1174, 500);
+        Beep(880, 1500);
 
-        Console.Beep(783, 250);
-        Console.Beep(880, 250);
-        Console.Beep(987, 1000);
+        Beep(783, 250);
+        Beep(880, 250);
+        Beep(987, 1000);
 
-        Console.Beep(1174, 500);
-        Console.Beep(880, 1500);
+        Beep(1174, 500);
+        Beep(880, 1500);
 
-        Console.Beep(987, 1000);
-        Console.Beep(1174, 500);
-        Console.Beep(1760, 1000);
-        Console.Beep(1567, 500);
-        Console.Beep(1174, 1000);
+        Beep(987, 1000);
+        Beep(1174, 500);
+        Beep(1760, 1000);
+        Beep(1567, 500);
+        Beep(1174, 1000);
 
-        Console.Beep(1046, 250);
-        Console.Beep(987, 250);
-        Console.Beep(880, 1000);
+        Beep(1046, 250);
+        Beep(987, 250);
+        Beep(880, 1000);
     }
 
 }
 
-class Program
+internal static class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        var school = new School("Platzi", "Lima", 2000, "Freddy");
+        var school = new School("Platzi","Lima");
         school.ring();
     }
 }

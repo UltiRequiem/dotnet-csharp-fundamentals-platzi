@@ -1,16 +1,14 @@
-namespace CoreSchool.Entities
+namespace CoolSchool.Entities;
+
+public class Course
 {
-    public class Course
+    public string Id { get; private set; }
+    public string Name { get; private set; }
+
+
+    public Course(string courseName)
     {
-        public string id { get; private set; }
-        public string name { get; private set; }
-
-
-        public Course(string courseName)
-        {
-            name = courseName;
-            id = Guid.NewGuid().ToString();
-        }
+        Name = courseName;
+        Id = Guid.NewGuid().ToString();
     }
-
 }

@@ -1,4 +1,4 @@
-namespace CoreSchool.Entities
+namespace CoolSchool.Entities
 {
 
     public enum SchoolTypes
